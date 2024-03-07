@@ -1,0 +1,26 @@
+{
+    "cards": {
+        "per_page": 1000
+    },
+    "products": {
+        "chunk_size": 1300,
+        "threads": 50
+    },
+    "csv_del": ",",
+    "to_xlsx": true,
+    "sizes": [36, 36.5, 37, 37.5, 38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5, 48, 48.5, 49, 49.5, 50, 50.5, 51, 51.5, 52.5],
+    "brands": [
+        "Air Jordan",
+        "Nike",
+        "New Balance",
+        "Adidas Originals",
+        "Asics",
+        "Puma",
+        "Reebok",
+        "Converse",
+        "Timberland",
+        "Under Armour",
+        "Vans",
+        "Off-White"
+    ]
+}
