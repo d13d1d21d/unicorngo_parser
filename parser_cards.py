@@ -49,10 +49,4 @@ for size in settings.sizes:
 print(f"[{Fore.GREEN + Style.BRIGHT}✓{Style.RESET_ALL}] Парсинг завершен. Обработано {Style.BRIGHT + str(len(cards)) + Style.RESET_ALL} карточек")
 pd.DataFrame(form_dataframe(cards, "cards")).to_csv("output/output_cards.csv", sep=settings.csv_del, index=False, encoding="utf-8")
 if settings.to_xlsx:
-    pass
-    """
     split_csv_to_xslx("output/output.csv")
-    Нужно будет ещё проверить насколько эффективной будет запись такого большо csv файла в xlsx,
-    учитывая ограничения на кол-во ссылок и строк на листе.
-    Поэтому эта опция пока под вопросом
-    """

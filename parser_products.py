@@ -83,10 +83,5 @@ with concurrent.futures.ThreadPoolExecutor(settings.products.threads) as executo
 print(f"[{Fore.GREEN + Style.BRIGHT}✓{Style.RESET_ALL}] Парсинг завершен. Обработано {Style.BRIGHT + str(n) + Style.RESET_ALL} товаров")
 pd.DataFrame(form_dataframe(products, "products")).to_csv("output/output.csv", sep=settings.csv_del, index=False, encoding="utf-8", header=insert_headers)
 if settings.to_xlsx:
-    pass
-    """
     split_csv_to_xslx("output/output.csv")
-    Нужно будет ещё проверить насколько эффективной будет запись такого большо csv файла в xlsx,
-    учитывая ограничения на кол-во ссылок и строк на листе,
-    поэтому эта опция под вопросом
-    """
+
