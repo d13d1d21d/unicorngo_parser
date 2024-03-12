@@ -27,7 +27,7 @@ MAX_URLS_PER_SHEET = 65530
 MAX_SHEETS_PER_BOOK = 255
 
 def split_csv_to_xslx(file: str, output_file: str | None = None) -> None:
-    if not output_file: output_file = os.path.join(*os.path.split(file)[:-1], 'xlsx_output', os.path.split(file)[-1]).replace(".csv", ".xlsx")
+    if not output_file: output_file = os.path.join(*os.path.split(file)[:-1], "xlsx_output", os.path.split(file)[-1]).replace(".csv", ".xlsx")
 
     print(output_file)
     n_file = 1
@@ -48,7 +48,7 @@ def split_csv_to_xslx(file: str, output_file: str | None = None) -> None:
 
             if n_sheet >= MAX_SHEETS_PER_BOOK:
                 writer.save()
-                writer = pd.ExcelWriter(output_file.replace(".xlsx", f"{n_file}.xlsx"), engine='openpyxl')
+                writer = pd.ExcelWriter(output_file.replace(".xlsx", f"{n_file}.xlsx"), engine="openpyxl")
                 n_file += 1
                 n_sheet = 0
 
