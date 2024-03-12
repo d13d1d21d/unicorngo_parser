@@ -49,4 +49,4 @@ for size in settings.sizes:
 print(f"[{Fore.GREEN + Style.BRIGHT}✓{Style.RESET_ALL}] Парсинг завершен. Обработано {Style.BRIGHT + str(len(cards)) + Style.RESET_ALL} карточек")
 pd.DataFrame(form_dataframe(cards, "cards")).to_csv("output/output_cards.csv", sep=settings.csv_del, index=False, encoding="utf-8")
 if settings.to_xlsx:
-    split_csv_to_xslx("output/output.csv")
+    split_csv_to_xslx("output/output_cards.csv")
