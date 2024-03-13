@@ -54,8 +54,8 @@ class WebParser:
         try:
             return list(
                 ProductCard(
-                    "UNG" + str(x.get("skuId")),
-                    "UNG" + str(x.get("spuId")),
+                    "UNG-" + str(x.get("skuId")),
+                    "UNG-" + str(x.get("spuId")),
                     self.form_product_url(x.get("skuId"), x.get("slug"), x.get("spuId")),
                     int(x.get("price")),
                     x.get("name"),
@@ -88,7 +88,7 @@ class WebParser:
                 if (price := int(i.get("price"))) > 0:
                     variations.append(
                         Product(
-                            "UNG" + str(i.get("skuId")),
+                            "UNG-" + str(i.get("skuId")),
                             card.spu,
                             card.url.replace(card.sku, str(i.get("skuId"))),
                             card.name,
