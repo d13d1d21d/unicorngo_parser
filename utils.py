@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 
 def dom_color_name(r: int, g: int, b: int) -> str:
     csv_reader = csv.reader(
-        open("colors.csv", newline="", encoding="utf-16"),
+        open("colors.csv", newline="", encoding="utf-8"),
         delimiter=","
     )
     next(csv_reader)
