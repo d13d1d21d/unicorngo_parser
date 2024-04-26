@@ -30,7 +30,7 @@ class Parser:
     def product_url(sku: str, slug: str, spu: str) -> str:
         return f"https://unicorngo.ru/product/{slug}-{spu}?sku={sku}"
     
-    @debug("Ошибка в парсинге SPU для {brand} - {size}: стр. {page}", True)
+    @debug("Ошибка в парсинге SPU для {brand} - {size}: стр. {page}")
     def get_spus(self, page: int, size: float, brand: str) -> list[int]:
         if data := self.proxy_client.retry("GET", self.BASE + f"?category=sneakers&perPage=1000&page={page}&sizeType=EU&sort=by-relevance&sizeValue={size}&brands={brand}"):
             return list(
