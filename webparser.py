@@ -46,7 +46,7 @@ class Parser:
             slug = data.get("slug")
             name = data.get("name")
             category = list(data.get("category").values())[-1]
-            desc = data.get("description", "-").replace("\n", "")
+            desc = data.get("description", "").replace("\n", "")
             images = data.get("skus")[0].get("images")
             brand = spu_data[1]
             color = dom_color_name(
