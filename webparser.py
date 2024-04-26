@@ -38,7 +38,7 @@ class Parser:
                 for i in data.json().get("items", [])
             )
     
-    @debug("Ошибка в товарв: {spu_data}")
+    @debug("Ошибка в парсинге данных товара: {spu_data}")
     def get_product_data(self, spu_data: list[str]) -> list[ProductData]:
         v = []
 
